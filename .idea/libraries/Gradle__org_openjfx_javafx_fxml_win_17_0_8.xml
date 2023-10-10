@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.openjfx:javafx-fxml:win:17.0.8" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.openjfx" artifactId="javafx-fxml" version="17.0.8" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.8/8b560131ce8f5139ab758875db4e9ebd2c969ae9/javafx-fxml-17.0.8-win.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/17.0.8/4145825448b675b95ebf29ff7cc0e24a460e8d46/javafx-fxml-17.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
