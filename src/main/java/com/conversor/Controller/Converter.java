@@ -13,6 +13,7 @@ import java.util.List;
 
 public class Converter {
     public static void convert(Path fromPath, Path toPath) throws Exception {
+        //Reads all data and saves each value in a list of String array
         try (Reader reader = Files.newBufferedReader(fromPath)) {
             CSVParser parser = new CSVParserBuilder().withSeparator(';').build();
             try(CSVReader csvReader = new CSVReaderBuilder(reader).withCSVParser(parser).build()){
@@ -26,81 +27,82 @@ public class Converter {
             Model model = new Model();
             File path = new File(String.valueOf(toPath));
             PrintWriter wr = new PrintWriter(path);
-            String[][] table = new String[columns.size()][8];
+            String[][] sheet = new String[columns.size()][8];
+            //Defines max column amount
             for(int i = 0; i < columns.size(); i++){
-                System.arraycopy(columns.get(i), 0, table[i], 0, columns.get(i).length);
+                System.arraycopy(columns.get(i), 0, sheet[i], 0, columns.get(i).length);
             }
             String parsedText = model.getHeader();
             String parsedEntry = "";
-            if(Integer.parseInt(table[1][0]) >= 200){
+            if(Integer.parseInt(sheet[1][0]) >= 200){
                 parsedText = parsedText.replaceAll("VAR1", "201");
-            } else if (Integer.parseInt(table[1][0]) < 100){
+            } else if (Integer.parseInt(sheet[1][0]) < 100){
                 parsedText = parsedText.replaceAll("VAR1", "1");
             } else{
                 parsedText = parsedText.replaceAll("VAR1", "101");
             }
-            parsedText = parsedText.replaceAll("VAR2", table[1][1].replaceAll("/","-"));
+            parsedText = parsedText.replaceAll("VAR2", sheet[1][1].replaceAll("/","-"));
 
-            for(int i = 1; i< table.length; i++){
+            for(int i = 1; i< sheet.length; i++){
                 String parsedParam = "";
-                if(table[i][4].contains("C")) {
+                if(sheet[i][4].contains("C")) {
                     String accountEntry = model.getAccountEntry();
-                    accountEntry = accountEntry.replaceAll("VAR1", table[i][2]);
+                    accountEntry = accountEntry.replaceAll("VAR1", sheet[i][2]);
                     accountEntry = accountEntry.replaceAll("VAR2", "C");
-                    String value = table[i][5].replaceAll("\\s", "");
+                    String value = sheet[i][5].replaceAll("\\s", "");
                     value = value.replaceAll("\\.", "");
                     value = value.replaceAll(",", ".");
                     accountEntry = accountEntry.replaceAll("VAR3", value);
-                    accountEntry = accountEntry.replaceAll("VAR4", table[i][6]);
-                    accountEntry = accountEntry.replaceAll("VAR5", table[i][0]);
-                    if(!table[i][3].isEmpty()){
+                    accountEntry = accountEntry.replaceAll("VAR4", sheet[i][6]);
+                    accountEntry = accountEntry.replaceAll("VAR5", sheet[i][0]);
+                    if(!sheet[i][3].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "T");
-                        param = param.replaceAll("VAR2", table[i][3]);
+                        param = param.replaceAll("VAR2", sheet[i][3]);
                         parsedParam = parsedParam.concat(param + "\n");
                     }
-                    if (table[0][7].contains("P") && !table[i][7].isEmpty()){
+                    if (sheet[0][7].contains("P") && !sheet[i][7].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "PE");
-                        param = param.replaceAll("VAR2", table[i][7]);
+                        param = param.replaceAll("VAR2", sheet[i][7]);
                         parsedParam = parsedParam.concat(param + "\n");
-                    } else if (table[0][7].contains("B") && !table[i][7].isEmpty()){
+                    } else if (sheet[0][7].contains("B") && !sheet[i][7].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "BC");
-                        param = param.replaceAll("VAR2", table[i][7]);
+                        param = param.replaceAll("VAR2", sheet[i][7]);
                         parsedParam = parsedParam.concat(param + "\n");
                     }
                     accountEntry = accountEntry.replaceAll("VAR6", parsedParam);
                     parsedEntry = parsedEntry.concat(accountEntry + "\n");
                 }
             }
-            for(int i = 1; i< table.length; i++){
+            for(int i = 1; i< sheet.length; i++){
                 String parsedParam = "";
-                if(table[i][4].contains("D")){
+                if(sheet[i][4].contains("D")){
                     String accountEntry = model.getAccountEntry();
-                    accountEntry = accountEntry.replaceAll("VAR1", table[i][2]);
+                    accountEntry = accountEntry.replaceAll("VAR1", sheet[i][2]);
                     accountEntry = accountEntry.replaceAll("VAR2", "D");
-                    String value = table[i][5].replaceAll("\\s", "");
+                    String value = sheet[i][5].replaceAll("\\s", "");
                     value = value.replaceAll("\\.", "");
                     value = value.replaceAll(",",".");
                     accountEntry= accountEntry.replaceAll("VAR3", value);
-                    accountEntry= accountEntry.replaceAll("VAR4", table[i][6]);
-                    accountEntry = accountEntry.replaceAll("VAR5", table[i][0]);
-                    if(!table[i][3].isEmpty()){
+                    accountEntry= accountEntry.replaceAll("VAR4", sheet[i][6]);
+                    accountEntry = accountEntry.replaceAll("VAR5", sheet[i][0]);
+                    if(!sheet[i][3].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "T");
-                        param = param.replaceAll("VAR2", table[i][3]);
+                        param = param.replaceAll("VAR2", sheet[i][3]);
                         parsedParam = parsedParam.concat(param + "\n");
                     }
-                    if (table[0][7].contains("P") && !table[i][7].isEmpty()){
+                    if (sheet[0][7].contains("P") && !sheet[i][7].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "PE");
-                        param = param.replaceAll("VAR2", table[i][7]);
+                        param = param.replaceAll("VAR2", sheet[i][7]);
                         parsedParam = parsedParam.concat(param + "\n");
-                    }else if (table[0][7].contains("B") && !table[i][7].isEmpty()){
+                    }else if (sheet[0][7].contains("B") && !sheet[i][7].isEmpty()){
                         String param = model.getDynamicParam();
                         param = param.replaceAll("VAR1", "BC");
-                        param = param.replaceAll("VAR2", table[i][7]);
+                        param = param.replaceAll("VAR2", sheet[i][7]);
                         parsedParam = parsedParam.concat(param + "\n");
                     }
                     accountEntry = accountEntry.replaceAll("VAR6", parsedParam);
