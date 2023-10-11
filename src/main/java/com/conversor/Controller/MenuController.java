@@ -31,7 +31,7 @@ public class MenuController {
                 savePath = selectedFile.getAbsolutePath();
                 Path fromPath = Paths.get(openPath);
                 Path toPath = Paths.get(savePath);
-                Converter.convert(fromPath, toPath);
+                Converter.readFile(fromPath, toPath);
                 txtFieldSim.setText("");
                 JOptionPane.showMessageDialog(null, "Arquivo criado com" +
                         " sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);

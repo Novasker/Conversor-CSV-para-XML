@@ -4,24 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0611ae-51dd-45e1-b797-4bdaeefbbd37" name="Changes" comment="Base Version">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+    <list default="true" id="6b0611ae-51dd-45e1-b797-4bdaeefbbd37" name="Changes" comment="Comments added">
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/conversor.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/conversor.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/conversor.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/conversor-plain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/conversor-plain.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/conversor/Controller/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/conversor/Controller/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/conversor/Controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/conversor/Controller/MenuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,29 +59,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/lucas.novaski/Documents/JavaProjects/Conversor",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15625",
-    "project.structure.side.proportion": "0.41135573",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lucas.novaski/Documents/JavaProjects/Conversor&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15625&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41135573&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\com\conversor\Image" />
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\Icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor-CSV-para-XML\src\main\java\com\conversor\Model" />
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\com\conversor\View" />
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\com\conversor" />
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources" />
       <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\com\conversor\Image" />
-      <recent name="C:\Users\lucas.novaski\Documents\JavaProjects\Conversor\src\main\resources\com\conversor\Vire" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.conversor" />
@@ -229,11 +216,20 @@
       <option name="project" value="LOCAL" />
       <updated>1696964612804</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Comments added">
+      <option name="closed" value="true" />
+      <created>1696967455733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696967455733</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base Version" />
+    <MESSAGE value="Comments added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments added" />
   </component>
 </project>
