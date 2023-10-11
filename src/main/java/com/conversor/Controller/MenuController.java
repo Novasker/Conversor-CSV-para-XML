@@ -1,7 +1,6 @@
 package com.conversor.Controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 
@@ -13,8 +12,6 @@ import java.nio.file.Paths;
 public class MenuController {
     String openPath;
     String savePath;
-    @FXML
-    private Label welcomeText;
     @FXML
     private TextField txtFieldSim;
     @FXML
