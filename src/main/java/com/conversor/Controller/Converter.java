@@ -80,6 +80,7 @@ public class Converter {
     }
 
     private static String defParam(String[][] sheet, String model, int i) {
+        //Creates the dynamic parameters
         if(!sheet[i][3].isEmpty()){
             model = model.replaceAll("VAR1", "T");
             model = model.replaceAll("VAR2", sheet[i][3]);
