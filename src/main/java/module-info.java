@@ -8,6 +8,4 @@ module com.conversor {
     exports com.conversor;
     exports com.conversor.Controller;
     opens com.conversor.Controller to javafx.fxml;
-    exports com.conversor.Model;
-    opens com.conversor.Model to javafx.fxml;
 }
