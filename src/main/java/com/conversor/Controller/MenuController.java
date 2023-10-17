@@ -9,18 +9,23 @@ import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 
 import javax.swing.*;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
 import static com.conversor.Controller.Converter.writeFile;
 
 public class MenuController {
+    private static final String COMMA_DELIMITER = ";";
     String openPath;
     String savePath;
     @FXML
@@ -39,7 +44,11 @@ public class MenuController {
     }
     @FXML
     protected void onGerarXMLButtonClick() {
-        if(openPath != null){
+        if(String.valueOf(txtFieldSim.getText()) == null){
+            JOptionPane.showMessageDialog(null, "Caminho do arquivo" +
+                    " não selecionado", "Erro!", JOptionPane.ERROR_MESSAGE);
+            txtFieldSim.setText("");
+        }else if(openPath != null){
             try {
                 String timeStamp = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(Calendar.getInstance().getTime());
                 //Select desired save file path
@@ -60,16 +69,13 @@ public class MenuController {
                 txtFieldSim.setText("");
                 JOptionPane.showMessageDialog(null, "Arquivo criado com" +
                         " sucesso!", "Sucesso!", JOptionPane.PLAIN_MESSAGE);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Erro ao "+
-                        "selecionar o caminho.", "Erro!", JOptionPane.ERROR_MESSAGE);
+            }   catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Erro: " +
+                        e.getMessage(), "Erro!", JOptionPane.ERROR_MESSAGE);
                 txtFieldSim.setText("");
             }
-        } else{
-            JOptionPane.showMessageDialog(null, "Erro ao "+
-                    "selecionar o caminho.", "Erro!", JOptionPane.ERROR_MESSAGE);
-            txtFieldSim.setText("");
         }
+
     }
 
     public static void readFile(Path fromPath, Path toPath) throws Exception {
@@ -84,5 +90,4 @@ public class MenuController {
             }
         }
     }
-
 }

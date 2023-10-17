@@ -47,7 +47,9 @@ public class Converter {
     private static String defCompany(int sheet){
 
         //Defines which company it should use
-        if(sheet >= 200){
+        if(sheet >= 300){
+            return "300";
+        } else if(sheet >=200){
             return "201";
         } else if (sheet < 100){
             return "1";

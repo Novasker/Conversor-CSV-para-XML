@@ -7,13 +7,16 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("View/menu.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("ConversorXML");
-        stage.getIcons().add(new Image("com/conversor/Image/icon.png"));
+        stage.getIcons().add(new Image(String.valueOf(HelloApplication.class.getResource("Image/icon.png"))));
+        stage.setTitle("Conversor XML");
         stage.setScene(scene);
         stage.show();
     }

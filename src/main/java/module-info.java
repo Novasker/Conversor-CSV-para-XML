@@ -1,8 +1,8 @@
 module com.conversor {
     requires javafx.controls;
     requires javafx.fxml;
-    requires com.opencsv;
     requires java.desktop;
+    requires com.opencsv;
 
     opens com.conversor to javafx.fxml;
     exports com.conversor;
